@@ -1,0 +1,54 @@
+import java.io.IOException;
+import java.util.*;
+ 
+/**
+ * IMPORTANT: 
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner e = new Scanner(System.in);
+
+    int casos = 0;
+    double r=0,v1=0,v2=0;
+    String salida ="",rF="";
+
+    casos = Integer.parseInt(e.nextLine());
+
+    for(int i = 1; i <= casos; i++)
+    {
+        String[] entrada = e.nextLine().split(" ");
+
+        v1= Double.parseDouble(entrada[0]);
+        v2= Double.parseDouble(entrada[1]);
+
+        r = ((v1/2) * (v2/2)) * 2;
+
+        salida = String.valueOf(r);
+
+        for(int j = 0; j < salida.length(); j++)
+        {
+            String le = salida.substring(j,j+1);
+            if(le.equals("."))
+            {
+                break;
+            }else
+            {
+              rF +=  salida.substring(j,j+1); 
+            }
+        }
+
+        System.out.println(rF + " cm2");
+
+        rF="";
+        
+
+    }
+
+    }
+ 
+}
