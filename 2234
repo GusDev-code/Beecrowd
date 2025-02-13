@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.util.*;
+ 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner e = new Scanner(System.in);
+		
+		String[] entrada = e.nextLine().split(" ");
+		
+		System.out.println(media(Double.parseDouble(entrada[0]),Double.parseDouble(entrada[1])));
+    }
+    
+    public static String media(double consumidos, double total) 
+	{
+		
+		double resultado = 0;
+		
+		resultado = consumidos/total;
+		
+		return String.format("%.2f", resultado);
+	}
+ 
+}
