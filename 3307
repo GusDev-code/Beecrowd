@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.util.*;
+
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner e = new Scanner(System.in);
+		int i = 0;
+		int casos = e.nextInt();
+		
+		for(i = 1; i <= casos; i++) 
+		{
+			int a = e.nextInt();
+			
+			double radio = 0;
+			double pi = 3.14;
+			
+			radio = Math.sqrt(a / (pi * 4));
+			
+			if(radio < 12) 
+			{
+				System.out.printf("vermelho = R$ %.2f", (a * 0.09));
+			}
+			
+			if(radio >= 12 && radio <= 15) 
+			{
+				System.out.printf("azul = R$ %.2f", (a * 0.07));
+			}
+			
+			if(radio > 15) 
+			{
+				System.out.printf("amarelo = R$ %.2f", (a * 0.05));
+			}
+			
+			System.out.println();
+			
+		}
+			
+		
+    }
+ 
+}
