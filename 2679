@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.*;
+ 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner scanner = new Scanner(System.in);
+        
+		int X = scanner.nextInt();
+        
+		System.out.println(numeroMinimo(X));
+ 
+    }
+    
+    public static int numeroMinimo(int a) 
+	{
+		Boolean encontrado = false;
+		
+		while(!encontrado) 
+		{
+			a++;
+			
+			if(a % 2 == 0) 
+			{
+				encontrado = true;
+			}
+		}
+		
+		return a;
+	}
+ 
+}
