@@ -1,0 +1,11 @@
+Scanner e = new Scanner(System.in);
+
+		while(e.hasNext()){
+			
+			int degree = e.nextInt();
+			if(degree >= 0 && degree < 90 || degree == 360) System.out.println("Bom Dia!!");
+			else if(degree >= 90 && degree < 180) System.out.println("Boa Tarde!!");
+			else if(degree >= 180 && degree < 270) System.out.println("Boa Noite!!");
+			else System.out.println("De Madrugada!!");
+			
+		}
